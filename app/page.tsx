@@ -16,8 +16,10 @@ const formSchema = z.object({
   emailAddress: z.string().email(),
   phoneNumber: z.string(),
   productName: z.string(),
-  quantity: z.number(),
-  price: z.string(),
+  quantity: z.coerce
+    .number({ required_error: "quantity is required",invalid_type_error: "Must be a number", }),
+  price: z.coerce
+    .number({ required_error: "quantity is required",invalid_type_error: "Must be a number", }),
 
   paymenttype: z.enum(["Knet", "Visa", "COD"], {
     required_error: "You need to select a Payment method."
