@@ -20,7 +20,7 @@ export default function PaymentStatus({...params}: any) {
    const { paymentId, Id } = params.searchParams;
    const data = {
       key: paymentId,
-      KeyType: 'paymentId,
+      KeyType: 'paymentId',
     }
    axios.post('./api/getPaymentStatus', {
     data: data
