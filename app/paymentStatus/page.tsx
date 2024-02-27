@@ -7,7 +7,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 
-export default function PaymentStatus({...params}) {
+export default function PaymentStatus({...params}: any) {
    const [paymentResult, setPaymentResult] = useState('');
    const [invoiceId, setInvoiceId] = useState('');
    const [CustomerEmail, setCustomerEmail] = useState('');
@@ -19,8 +19,8 @@ export default function PaymentStatus({...params}) {
 
    const { paymentId, Id } = params.searchParams;
    const data = {
-        [key: paymentId]:any,
-        [KeyType: 'paymentId]:any,
+      key: paymentId,
+      KeyType: 'paymentId,
     }
    axios.post('./api/getPaymentStatus', {
     data: data
