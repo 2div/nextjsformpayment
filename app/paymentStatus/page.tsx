@@ -22,7 +22,7 @@ export default function PaymentStatus({...params}) {
         key: paymentId,
         KeyType: 'paymentId'
     }
-   axios.post('/api/getPaymentStatus', {
+   axios.post('./api/getPaymentStatus', {
     data: data
   },
   {
