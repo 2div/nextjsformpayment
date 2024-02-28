@@ -76,3 +76,4 @@ export default function PaymentStatus({...params}: any) {
   );
 }
 
+export const dynamic = 'force-dynamic'
